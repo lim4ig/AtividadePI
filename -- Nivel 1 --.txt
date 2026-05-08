@@ -1,0 +1,165 @@
+-- Nivel 1 --
+
+-- 1. --
+select ta.nome_aluno, tt.nome_turma from tb_alunos ta 
+inner join tb_turmas tt 
+on ta.id_turma_fk = tt.id_turma 
+
+-- 2. --
+select ta.nome_aluno, ta.idade, td.nome_docente from tb_alunos ta 
+inner join tb_turmas tt
+inner join tb_docentes td 
+on ta.id_turma_fk = tt.id_docente_fk 
+
+-- 3. --
+select tt.nome_turma, tt.qntd_alunos from tb_turmas tt 
+inner join tb_alunos ta 
+on tt.id_turma = ta.id_turma_fk
+order by qntd_alunos desc 
+
+-- 4. --
+select ta.nome_aluno, ta.idade, tt.nome_turma, tt.nome_curso from tb_alunos ta 
+inner join tb_turmas tt 
+on ta.id_turma_fk = tt.id_turma 
+
+-- 5. --
+select ta.nome_aluno, tt.nome_curso, ts.n_sala from tb_alunos ta 
+inner join tb_turmas tt 
+on ta.id_turma_fk = tt.id_turma
+inner join tb_sala_x_turma tsxt 
+on tsxt.id_turma_fk = tt.id_turma 
+inner join tb_salas ts 
+on tsxt.id_sala_fk = ts.id_sala 
+order by n_sala asc
+
+-- 6. --
+ select td.nome_docente, tt.nome_turma  from tb_docentes td 
+ inner join tb_turmas tt 
+ on tt.id_docente_fk  = td.id_docente 
+ 
+ -- 7. --
+ select ta.nome_aluno , tt.nome_turma, tsxt.inicio_curso from tb_alunos ta  
+ inner join tb_turmas tt 
+ on ta.id_turma_fk = tt.id_turma 
+ inner join tb_sala_x_turma tsxt 
+ on tsxt.id_turma_fk = tt.id_turma 
+ 
+ -- 8. --
+ select td.nome_docente, tt.nome_turma from tb_turmas tt 
+ inner join tb_docentes td  on tt.id_docente_fk = td.id_docente
+ group by td.nome_docente 
+ 
+ -- 9. --
+select tt.nome_turma , td.nome_docente  from tb_turmas tt
+inner join tb_docentes td on tt.id_docente_fk = td.id_docente;
+ 
+ -- 10. --
+select ta.nome_aluno , tt.nome_turma , ts.nome  from tb_alunos ta
+inner join tb_turmas tt  on ta.id_turma_fk = tt.id_turma
+inner join tb_sala_x_turma tsxt on tsxt.id_turma_fk = tt.id_turma
+inner join tb_salas ts  on tsxt.id_sala_fk = ts.id_sala;
+
+
+-- Nivel 2 --
+ 
+-- 1. --
+select ta.nome_aluno , tt.nome_turma , td.nome_docente , ts.nome  from tb_alunos ta
+inner join tb_turmas tt  on ta.id_turma_fk = tt.id_turma
+inner join tb_docentes td  on tt.id_docente_fk = td.id_docente
+inner join tb_sala_x_turma tsxt  on tsxt.id_turma_fk = tt.id_turma
+inner join tb_salas ts  on tsxt.id_sala_fk = ts.id_sala ;
+
+-- 2. --
+select ta.nome_aluno , tt.nome_turma , td.nome_docente, ts.qntd_lugares from tb_alunos ta
+inner join tb_turmas tt  on ta.id_turma_fk = tt.id_turma
+inner join tb_docentes td  on tt.id_docente_fk = td.id_docente
+inner join tb_sala_x_turma tsxt on tsxt.id_turma_fk = tt.id_turma
+inner join tb_salas ts on tsxt.id_sala_fk = ts.id_sala;
+
+-- 3. --
+select ta.nome_aluno , tt.nome_turma , td.nome_docente , tsxt.inicio_curso   from tb_alunos ta
+inner join tb_turmas tt on ta.id_turma_fk = tt.id_turma
+inner join tb_docentes td on tt.id_docente_fk = td.id_docente
+inner join tb_sala_x_turma tsxt on tsxt.id_turma_fk = tt.id_turma;
+
+-- 4. --
+select tt.nome_turma , td.nome_docente , ts.qntd_lugares  from tb_turmas tt
+inner join tb_docentes td on tt.id_docente_fk = td.id_docente
+inner join tb_sala_x_turma tsxt on tsxt.id_turma_fk = tt.id_turma
+inner join tb_salas ts on tsxt.id_sala_fk = ts.id_sala ;
+
+-- 5. --
+select ta.nome_aluno , tt.nome_turma , td.nome_docente , tt.nome_curso  from tb_alunos ta
+inner join tb_turmas tt on ta.id_turma_fk = tt.id_turma
+inner join tb_docentes td  on tt.id_docente_fk = td.id_docente;
+
+-- 6. --
+select tt.nome_turma , ta.nome_aluno , ts.nome   from tb_turmas tt
+inner join tb_alunos ta on ta.id_turma_fk = tt.id_turma
+inner join tb_sala_x_turma tsxt on tsxt.id_turma_fk = tt.id_turma
+inner join tb_salas ts on tsxt.id_sala_fk = ts.id_sala
+
+-- 7. --
+select ta.nome_aluno , tt.nome_turma , td.nome_docente  from tb_alunos ta
+inner join tb_turmas tt  on ta.id_turma_fk = tt.id_turma
+inner join tb_docentes td on tt.id_docente_fk = td.id_docente
+order by ta.nome_aluno;
+
+-- 8. --
+select ts.n_sala , tt.nome_turma , ts.qntd_lugares  from tb_salas ts
+inner join tb_sala_x_turma tsxt  on tsxt.id_sala_fk = ts.id_sala
+inner join tb_turmas tt on tsxt.id_turma_fk = tt.id_turma ;
+
+
+-- Nivel 3 --
+
+-- 1. --
+select ta.nome_aluno, td.nome_docente from tb_alunos ta 
+inner join tb_turmas tt on ta.id_turma_fk = tt.id_turma 
+inner join tb_docentes td on tt.id_docente_fk = td.id_docente 
+where tt.nome_turma = 'ADS-1A';	
+
+-- 2. --
+select tt.nome_turma, ts.nome AS nome_sala, tsxt.inicio_curso from  tb_turmas tt
+inner join  tb_sala_x_turma tsxt ON tt.id_turma = tsxt.id_turma_fk
+inner join tb_salas ts ON tsxt.id_sala_fk = ts.id_sala
+where tsxt.inicio_curso > '2025-02-01';
+
+-- 3. --
+select ta.nome_aluno, ts.nome AS nome_sala from tb_alunos ta
+inner join tb_turmas tt ON ta.id_turma_fk = tt.id_turma
+inner join tb_sala_x_turma tsxt ON tt.id_turma = tsxt.id_turma_fk
+inner join tb_salas ts ON tsxt.id_sala_fk = ts.id_sala
+where tt.nome_turma = 'CS-1A';
+
+-- 4. --
+select tt.nome_turma, ts.nome AS nome_sala from tb_turmas tt
+inner join tb_docentes td ON tt.id_docente_fk = td.id_docente
+inner join tb_sala_x_turma tsxt ON tt.id_turma = tsxt.id_turma_fk
+inner join tb_salas ts ON tsxt.id_sala_fk = ts.id_sala
+where td.area_docente = 'Engenharia de Software';
+
+-- 5. --
+select ta.nome_aluno, tt.nome_turma, ts.qntd_lugares from tb_alunos ta
+inner join tb_turmas tt ON ta.id_turma_fk = tt.id_turma
+inner join tb_sala_x_turma tsxt ON tt.id_turma = tsxt.id_turma_fk
+inner join tb_salas ts ON tsxt.id_sala_fk = ts.id_sala
+where ts.qntd_lugares > 30;
+
+-- 6. --
+select ta.nome_aluno, ts.nome AS nome_sala from tb_alunos ta
+inner join tb_turmas tt ON ta.id_turma_fk = tt.id_turma
+inner join tb_sala_x_turma tsxt ON tt.id_turma = tsxt.id_turma_fk
+inner join tb_salas ts ON tsxt.id_sala_fk = ts.id_sala
+where tsxt.inicio_curso > '2025-03-01';
+
+-- 7. --
+select ta.nome_aluno, tt.nome_turma, tsxt.fim_curso from tb_alunos ta
+inner join tb_turmas tt on ta.id_turma_fk = tt.id_turma
+inner join tb_sala_x_turma tsxt on tt.id_turma = tsxt.id_turma_fk
+where tsxt.fim_curso between '2024-01-01' and '2024-12-31';
+
+-- 8. --
+select ta.nome_aluno, tt.nome_turma from tb_alunos ta
+inner join tb_turmas tt on ta.id_turma_fk = tt.id_turma
+order by ta.nome_aluno;
