@@ -2,7 +2,6 @@ C:\Users\igor.lmatheus\source\repos\AtividadePI\AtividadePI\bin\Debug\AtividadeP
 C:\Users\igor.lmatheus\source\repos\AtividadePI\AtividadePI\bin\Debug\AtividadePI.exe
 C:\Users\igor.lmatheus\source\repos\AtividadePI\AtividadePI\bin\Debug\AtividadePI.pdb
 C:\Users\igor.lmatheus\source\repos\AtividadePI\AtividadePI\obj\Debug\AtividadePI.csproj.AssemblyReference.cache
-C:\Users\igor.lmatheus\source\repos\AtividadePI\AtividadePI\obj\Debug\AtividadePI.Form1.resources
 C:\Users\igor.lmatheus\source\repos\AtividadePI\AtividadePI\obj\Debug\AtividadePI.LoginADM.resources
 C:\Users\igor.lmatheus\source\repos\AtividadePI\AtividadePI\obj\Debug\AtividadePI.Properties.Resources.resources
 C:\Users\igor.lmatheus\source\repos\AtividadePI\AtividadePI\obj\Debug\AtividadePI.csproj.GenerateResource.cache
