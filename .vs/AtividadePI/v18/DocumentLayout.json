@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\igor.lmatheus\\source\\repos\\AtividadePI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{32D71200-3763-4D95-9F01-4327544295BE}|AtividadePI.csproj|c:\\users\\igor.lmatheus\\source\\repos\\atividadepi\\loginadm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32D71200-3763-4D95-9F01-4327544295BE}|AtividadePI.csproj|solutionrelative:loginadm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32D71200-3763-4D95-9F01-4327544295BE}|AtividadePI.csproj|C:\\Users\\igor.lmatheus\\source\\repos\\AtividadePI\\loginadm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{32D71200-3763-4D95-9F01-4327544295BE}|AtividadePI.csproj|solutionrelative:loginadm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32D71200-3763-4D95-9F01-4327544295BE}|AtividadePI.csproj|C:\\Users\\igor.lmatheus\\source\\repos\\AtividadePI\\loginadm.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32D71200-3763-4D95-9F01-4327544295BE}|AtividadePI.csproj|solutionrelative:loginadm.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginADM.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\igor.lmatheus\\source\\repos\\AtividadePI\\LoginADM.Designer.cs",
+              "RelativeDocumentMoniker": "LoginADM.Designer.cs",
+              "ToolTip": "C:\\Users\\igor.lmatheus\\source\\repos\\AtividadePI\\LoginADM.Designer.cs",
+              "RelativeToolTip": "LoginADM.Designer.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAUwFoAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T22:57:12.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginADM.cs",
+              "DocumentMoniker": "C:\\Users\\igor.lmatheus\\source\\repos\\AtividadePI\\LoginADM.cs",
+              "RelativeDocumentMoniker": "LoginADM.cs",
+              "ToolTip": "C:\\Users\\igor.lmatheus\\source\\repos\\AtividadePI\\LoginADM.cs",
+              "RelativeToolTip": "LoginADM.cs",
+              "ViewState": "AgIAALUAAAAAAAAAAAAYwMkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T22:38:25.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginADM.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\igor.lmatheus\\source\\repos\\AtividadePI\\LoginADM.cs",
+              "RelativeDocumentMoniker": "LoginADM.cs",
+              "ToolTip": "C:\\Users\\igor.lmatheus\\source\\repos\\AtividadePI\\LoginADM.cs [Design]",
+              "RelativeToolTip": "LoginADM.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T22:36:32.681Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

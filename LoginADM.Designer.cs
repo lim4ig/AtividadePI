@@ -30,13 +30,16 @@
         {
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.labelPass = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.labelUser = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtNumId = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.Label();
+            this.dtpData = new System.Windows.Forms.DateTimePicker();
             this.btnLista = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,7 +47,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvLista = new System.Windows.Forms.DataGridView();
-            this.dtpData = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.SuspendLayout();
@@ -67,15 +69,17 @@
             this.btnEditar.TabIndex = 14;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // btnCancel
+            // btnExcluir
             // 
-            this.btnCancel.Location = new System.Drawing.Point(139, 180);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 13;
-            this.btnCancel.Text = "Cancelar";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnExcluir.Location = new System.Drawing.Point(139, 180);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 13;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnCadastrar
             // 
@@ -85,7 +89,7 @@
             this.btnCadastrar.TabIndex = 12;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
-            this.btnCadastrar.Click += new System.EventHandler(this.buttonLogin_Click);
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click_1);
             // 
             // txtSenha
             // 
@@ -124,6 +128,8 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox1.Controls.Add(this.txtNumId);
+            this.groupBox1.Controls.Add(this.txtID);
             this.groupBox1.Controls.Add(this.dtpData);
             this.groupBox1.Controls.Add(this.btnLista);
             this.groupBox1.Controls.Add(this.txtNome);
@@ -132,7 +138,7 @@
             this.groupBox1.Controls.Add(this.txtArea);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btnEditar);
-            this.groupBox1.Controls.Add(this.btnCancel);
+            this.groupBox1.Controls.Add(this.btnExcluir);
             this.groupBox1.Controls.Add(this.btnCadastrar);
             this.groupBox1.Controls.Add(this.txtSenha);
             this.groupBox1.Controls.Add(this.labelPass);
@@ -144,6 +150,29 @@
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " ";
+            // 
+            // txtNumId
+            // 
+            this.txtNumId.Location = new System.Drawing.Point(92, 11);
+            this.txtNumId.Name = "txtNumId";
+            this.txtNumId.Size = new System.Drawing.Size(230, 20);
+            this.txtNumId.TabIndex = 22;
+            // 
+            // txtID
+            // 
+            this.txtID.AutoSize = true;
+            this.txtID.Location = new System.Drawing.Point(41, 14);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(21, 13);
+            this.txtID.TabIndex = 21;
+            this.txtID.Text = "ID:";
+            // 
+            // dtpData
+            // 
+            this.dtpData.Location = new System.Drawing.Point(44, 154);
+            this.dtpData.Name = "dtpData";
+            this.dtpData.Size = new System.Drawing.Size(278, 20);
+            this.dtpData.TabIndex = 20;
             // 
             // btnLista
             // 
@@ -204,13 +233,7 @@
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.Size = new System.Drawing.Size(326, 271);
             this.dgvLista.TabIndex = 18;
-            // 
-            // dtpData
-            // 
-            this.dtpData.Location = new System.Drawing.Point(44, 154);
-            this.dtpData.Name = "dtpData";
-            this.dtpData.Size = new System.Drawing.Size(278, 20);
-            this.dtpData.TabIndex = 20;
+            this.dgvLista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLista_CellContentClick);
             // 
             // LoginADM
             // 
@@ -234,7 +257,7 @@
 
         private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label labelPass;
@@ -249,5 +272,7 @@
         private System.Windows.Forms.Button btnLista;
         private System.Windows.Forms.DataGridView dgvLista;
         private System.Windows.Forms.DateTimePicker dtpData;
+        private System.Windows.Forms.TextBox txtNumId;
+        private System.Windows.Forms.Label txtID;
     }
 }
